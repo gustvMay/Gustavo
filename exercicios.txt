@@ -217,3 +217,86 @@ int main() {
  
  return 0;
 }
+
+========================================================================
+
+#include <stdio.h>
+ 
+int main() {
+ 
+    char nome[100];
+    double salario, vendas, total;
+    
+    scanf("%s", nome);
+    scanf("%lf", &salario);
+    scanf("%lf", &vendas);
+    
+    total = (vendas * 0.15 + salario);
+    
+    printf("TOTAL = R$ %.2lf\n", total);
+    
+    return 0;
+}
+
+=======================================================
+
+#include <stdio.h>
+ 
+int main() {
+ 
+    int cod1, cod2, num1, num2;
+    double valor1, valor2, total;
+    
+    scanf("%d %d %lf", &cod1, &num1, &valor1);
+    scanf("%d %d %lf", &cod2, &num2, &valor2);
+   
+    
+    total = (num1 * valor1) + (num2 * valor2);
+    
+    
+    printf("VALOR A PAGAR: R$ %.2lf\n", total);
+    
+    return 0;
+}
+
+============================================================
+
+#include <stdio.h>
+ 
+int main() {
+ 
+    double R, pi =3.14159, volume;
+    
+    scanf("%lf", &R);
+   
+    
+   volume = (4.0/3) * pi * R * R * R;
+    
+    
+    printf("VOLUME = %.3lf\n", volume);
+    
+    return 0;
+}
+
+==================================================================
+
+#include <stdio.h>
+
+int main() {
+ 
+    double A, B, C, tri, cir, tra, qua, ret;
+    
+    scanf("%lf %lf %lf", &A, &B, &C);
+   
+   tri = (A * C) / 2;
+   cir = C * C * 3.14159;
+   tra = ((A + B) * C) / 2;
+   qua = B * B;
+   ret = A * B;
+    
+    printf("TRIANGULO: %.3lf\nCIRCULO: %.3lf\nTRAPEZIO: %.3lf\n"
+    "QUADRADO: %.3lf\nRETANGULO: %.3lf\n", tri, cir, tra, qua, ret);
+    
+    return 0;
+}
+======================================
