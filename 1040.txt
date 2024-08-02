@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main() {
+    
+    float N1, N2, N3, N4;
+    float media, nota_exame, media_final;
+    int peso1 = 2, peso2 = 3, peso3 = 4, peso4 = 1;
+
+    
+    scanf("%f", &N1);
+    scanf("%f", &N2);
+    scanf("%f", &N3);
+    scanf("%f", &N4);
+
+    media = (N1 * peso1 + N2 * peso2 + N3 * peso3 + N4 * peso4) / (peso1 + peso2 + peso3 + peso4);
+
+
+    printf("Media: %.1f\n", media);
+
+    
+    if (media >= 7.0) {
+        printf("Aluno aprovado.\n");
+    } else if (media < 5.0) {
+        printf("Aluno reprovado.\n");
+    } else {
+   
+        printf("Aluno em exame.\n");
+
+       
+        scanf("%f", &nota_exame);
+        printf("Nota do exame: %.1f\n", nota_exame);
+
+
+        media_final = (media + nota_exame) / 2;
+
+        if (media_final >= 5.0) {
+            printf("Aluno aprovado.\n");
+        } else {
+            printf("Aluno reprovado.\n");
+        }
+
+       
+        printf("Media final: %.1f\n", media_final);
+    }
+
+    return 0;
+}
