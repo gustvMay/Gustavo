@@ -1,0 +1,181 @@
+#include <stdio.h>
+    
+    
+    int soma()
+    {
+        double  n1=0, n2=0, result=0;
+        
+        printf("Digite o primeiro numero:");
+        scanf("%lf", &n1);
+        
+        printf("Digite o segundo numero:");
+        scanf("%lf", &n2);
+        
+        result = n1 + n2;
+        
+        printf("%lf + %lf = %.5lf\n", n1, n2, result);
+        
+        
+    }
+    
+    int subtracao()
+    {
+        double  n1=0, n2=0, result=0;;
+        
+        printf("Digite o primeiro numero:");
+        scanf("%lf", &n1);
+        
+        printf("Digite o segundo numero:");
+        scanf("%lf", &n2);
+        
+        result = n1 - n2;
+        
+        printf("%lf - %lf = %.5lf\n", n1, n2, result);
+        
+        
+    }
+    
+    int multiplicacao()
+    {
+        double  n1=0, n2=0, result=0;
+        
+        printf("Digite o primeiro numero:");
+        scanf("%lf", &n1);
+        
+        printf("Digite o segundo numero:");
+        scanf("%lf", &n2);
+        
+        result = n1 * n2;
+        
+        printf("%lf * %lf = %.5lf\n", n1, n2, result);
+        
+        
+    }
+    
+    int divisao()
+    {
+        double  n1=0, n2=0, result=0;
+        
+        printf("Digite o primeiro numero:");
+        scanf("%lf", &n1);
+        
+        printf("Digite o segundo numero:");
+        scanf("%lf", &n2);
+        
+        result = n1 / n2;
+        
+        printf("%lf / %lf = %.5lf\n", n1, n2, result);
+        
+        
+    }
+    
+    int potenciacao()
+    {
+        double  n1=0;
+        int expoente=0;
+        
+        printf("Digite a base:");
+        scanf("%lf", &n1);
+        
+        printf("Digite o expoente:");
+        scanf("%d", &expoente);
+        
+        double total = 1;
+        
+        for (int i = 0; i < expoente; i++){
+            
+            total *= n1;
+        }
+        
+        printf("%lf ^ %d = %.5lf", n1, expoente, total);
+        
+        
+    }
+    
+    int radiciacao()
+    {
+        double  n1=0, total=0, result=0;
+        
+        printf("Digite o radicando:");
+        scanf("%lf", &n1);
+        
+        result = n1;
+        
+        for (int i = 0; i < 30; i++){
+            
+            result = 0.5 * (result + (n1/result));
+        }
+        
+        printf("Raiz quadrada de %lf = %.5lf", n1, result);
+        
+        
+    }
+    
+     void fatorial() 
+    {
+               int num = 0;
+               int resultado = 1;
+            
+               printf("Digite um número inteiro positivo para calcular: ");
+               scanf("%d", &num);
+            
+               while (num > 1) {
+                   resultado *= num;
+                   num--;
+               }
+        
+               printf("%d ! = %d\n", num, resultado);
+     }
+    int main(){
+        
+        int opcao;
+    
+    printf("Digite o numero da operacao que deseja realizar: ");
+    printf("1: SOMA\n2: SUBTRACAO\n3: MULTIPLICACAO\n4: DIVISAO\n5: POTENCIACAO\n6: RADICIACAO\n7: FATORIAL: \n");
+    scanf("%d", &opcao);
+    
+    switch (opcao) {
+        
+    case 1: 
+    printf("opcao 1 selecionada. \n");
+    soma();
+    break;
+    
+    case 2: 
+    printf("opcao 2 selecionada. \n");
+    subtracao();
+    break;
+    
+    case 3: 
+    printf("opcao 3 selecionada. \n");
+    multiplicacao();
+    break;
+    
+    case 4: 
+    printf("opcao 4 selecionada. \n");
+    divisao();
+    break;
+    
+    case 5: 
+    printf("opcao 5 selecionada. \n");
+    potenciacao();
+    break;
+    
+    case 6: 
+    printf("opcao 6 selecionada. \n");
+    radiciacao();
+    break;
+    
+    case 7: 
+    printf("opcao 7 selecionada. \n");
+    fatorial();
+    break;
+    
+    default:
+    printf("opcao invalida. \n");
+    
+    }
+        
+  
+    return 0;
+}
